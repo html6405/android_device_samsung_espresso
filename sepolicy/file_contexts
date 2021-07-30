@@ -7,7 +7,7 @@
 /system/bin/smc_pa_ctrl                     u:object_r:smc_pa_exec:s0
 
 # GPS
-/system/bin/gpsd                            u:object_r:gpsd_exec:s0
+# /system/bin/gpsd                            u:object_r:gpsd_exec:s0
 
 # Sensors
 /data/sensors(/.*)?                         u:object_r:sensors_data_file:s0
@@ -20,7 +20,7 @@
 /sys/devices/platform/bcm4330_bluetooth/rfkill/rfkill0/state u:object_r:sysfs_bluetooth_writable:s0
 
 # GPS
-/dev/ttyO0                                  u:object_r:gps_device:s0
+# /dev/ttyO0                                  u:object_r:gps_device:s0
 
 # Wifi
 /efs/wifi/.mac.info                         u:object_r:wifi_data_file:s0
