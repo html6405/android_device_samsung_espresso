@@ -44,7 +44,7 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Enable dex pre-optimization with PIC
 WITH_DEXPREOPT := true
-WITH_DEXPREOPT_PIC := true
+WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY =: true
 
 # Configure jemalloc for low-memory
 MALLOC_SVELTE := true
