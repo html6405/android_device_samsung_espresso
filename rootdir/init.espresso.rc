@@ -109,7 +109,7 @@ service smc_pa /system/bin/smc_pa_ctrl \
     group root
     oneshot
 
-service p2p_supplicant /system/bin/wpa_supplicant \
+service p2p_supplicant /vendor/bin/hw/wpa_supplicant \
     -iwlan0 -Dnl80211 -iwlan0 -c/data/misc/wifi/wpa_supplicant.conf \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf -N \
     -ip2p0 -Dnl80211 -c /data/misc/wifi/p2p_supplicant.conf \
@@ -125,7 +125,7 @@ service p2p_supplicant /system/bin/wpa_supplicant \
     disabled
     oneshot
 
-service wpa_supplicant /system/bin/wpa_supplicant \
+service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf \
     -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
@@ -137,6 +137,7 @@ service wpa_supplicant /system/bin/wpa_supplicant \
     socket wpa_wlan0 dgram 660 wifi wifi
     disabled
     oneshot
+
 service cpboot-daemon /system/vendor/bin/cbd -d -p 8
     class main
     user root
